@@ -22,7 +22,7 @@ int firstPos(int arr[], int size, int key)
         }
         else if (arr[mid] > key)
         {
-            end == mid - 1;
+            end = mid - 1;
         }
 
         mid = (start + end) / 2;
@@ -51,7 +51,7 @@ int lastPos(int arr[], int size, int key)
         }
         else if (arr[mid] > key)
         {
-            end == mid - 1;
+            end = mid - 1;
         }
 
         mid = (start + end) / 2;
