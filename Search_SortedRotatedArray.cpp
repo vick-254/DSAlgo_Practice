@@ -46,7 +46,7 @@ int searchSRArray(int arr[], int size, int key)
     }
     int mid = (s + e) / 2;
 
-    while (s < e)
+    while (s <= e)
     {
         if (arr[mid] > key)
         {
@@ -69,6 +69,6 @@ int main()
 {
 
     int arr[6] = {5, 6, 1, 2, 3, 4};
-    int ans = searchSRArray(arr, 6, 4);
+    int ans = searchSRArray(arr, 6, 6);
     cout << ans << endl;
 }
