@@ -39,6 +39,6 @@ int main()
     int ans = pairSum(arr, size, sum);
     if (ans == -1)
     {
-        cout << -1;
+        cout << -1 << endl;
     }
 }
