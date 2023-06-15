@@ -2,11 +2,9 @@
 using namespace std;
 
 int height = 5;
-// Number of character width in each line
+
 int width = (2 * height) - 1;
 
-// Function to find the absolute value
-// of a number D
 int abs(int d)
 {
     return d < 0 ? -1 * d : d;
