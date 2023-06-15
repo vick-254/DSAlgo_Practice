@@ -3,6 +3,7 @@ using namespace std;
 
 void bubbleSort(int arr[], int size)
 {
+    bool swapped;
 
     for (int i = 0; i < size - 1; i++)
     {
@@ -11,8 +12,11 @@ void bubbleSort(int arr[], int size)
             if (arr[j] > arr[j + 1])
             {
                 swap(arr[j], arr[j + 1]);
+                swapped = true;
             }
         }
+        if (swapped == false)
+            break;
     }
     for (int k = 0; k < size; k++)
     {
@@ -23,6 +27,6 @@ void bubbleSort(int arr[], int size)
 int main()
 {
 
-    int arr[6] = {11, 5, 3, 7, 4, 8};
+    int arr[6] = {1, 2, 8, 4, 5, 6};
     bubbleSort(arr, 6);
 }
