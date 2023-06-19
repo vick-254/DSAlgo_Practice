@@ -2,5 +2,5 @@ BINARY SEARCH ADVANCED
 
 bubble, insertion, selection sort
 merge 2 sorted arrays (2 pointer)
-movve zeros (2 pointer)
+move zeros (2 pointer)
 CYCLIC ROTATE ARRAY by 'k' positions

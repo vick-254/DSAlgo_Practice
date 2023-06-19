@@ -1,9 +1,12 @@
-leetcode 1207 E (hashmaps)
-leetcode 442
-intersection of two arrays (2 pointer approach)
-cycle sort
-pair sum (vector approach)
-sort 0 1 2 (Dutch National Flag)
-binary search loop break condition
-precision sqrt
+///leetcode 1207 E (hashmaps)
+
+leetcode 442 (DONE)
+intersection of two arrays (2 pointer approach) (DONE)
+cycle sort (DONE)
+pair sum (vector approach) (DONE)
+
+///sort 0 1 2 (Dutch National Flag)
+
+binary search loop break condition (DONE)
+precision sqrt (DONE)
 
