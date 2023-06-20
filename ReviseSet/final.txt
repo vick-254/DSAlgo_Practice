@@ -2,6 +2,6 @@ Move Zeroes
 
 Pair Sum / Triplet Sum
 
-SORTING
+SORTING ALGOS
 
 PrecisionSqrt
