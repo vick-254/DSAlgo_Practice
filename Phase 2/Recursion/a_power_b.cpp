@@ -13,6 +13,6 @@ int pow(int a, int b)
 int main()
 {
 
-    int a = pow(3, 4);
+    int a = pow(3, 5);
     cout << a;
 }
