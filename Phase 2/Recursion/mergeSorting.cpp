@@ -50,6 +50,9 @@ void merge(vector<int> &arr, int s, int e)
     {
         arr[k++] = second[j++];
     }
+
+    delete[] first;
+    delete[] second;
 }
 
 void mergeSort(vector<int> &arr, int s, int e)
