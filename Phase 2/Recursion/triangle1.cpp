@@ -13,13 +13,15 @@ void pattern1(int m, int n)
 
     if (n < m)
     {
-        cout << "* ";
+
         pattern1(m, n + 1);
+        cout << "* ";
     }
     else
     {
-        cout << endl;
+
         pattern1(m - 1, 0);
+        cout << endl;
     }
 }
 
