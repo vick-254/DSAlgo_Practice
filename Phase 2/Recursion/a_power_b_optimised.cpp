@@ -11,11 +11,11 @@ int pow(int a, int b)
         return pow(a, b / 2) * pow(a, b / 2);
 
     if (b % 2 != 0)
-        return a * pow(a, b / 2);
+        return a * pow(a, b / 2) * pow(a, b / 2);
 }
 
 int main()
 {
-    int a = pow(3, 2);
+    int a = pow(3, 5);
     cout << a;
 }
