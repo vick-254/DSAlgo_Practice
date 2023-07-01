@@ -17,11 +17,11 @@ void bubbleSort(vector<int> &arr, int r, int c)
         {
             swap(arr[c], arr[c + 1]);
         }
-        return bubbleSort(arr, r, c + 1);
+        bubbleSort(arr, r, c + 1);
     }
     else
     {
-        return bubbleSort(arr, r - 1, 0);
+        bubbleSort(arr, r - 1, 0);
     }
 }
 
