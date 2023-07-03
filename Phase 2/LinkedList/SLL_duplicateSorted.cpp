@@ -36,17 +36,30 @@ public:
 
     void deleteDuplicates(ListNode *curr)
     {
-        if (curr->next == NULL)
+        if (curr == NULL)
         {
             return;
         }
-        if (curr->val == curr->next->val)
+        if (!curr->next)
+        {
+            return;
+        }
+        if (curr->val == curr->next->val && curr->next->next != NULL)
         {
             curr->next = curr->next->next;
-            deleteDuplicates(curr->next);
+            deleteDuplicates(curr);
+            return;
+        }
+        if (curr->val == curr->next->val && curr->next->next == NULL)
+        {
+
+            curr->next = NULL;
+
+            return;
         }
 
         deleteDuplicates(curr->next);
+        return;
     }
 
 public:
@@ -93,6 +106,8 @@ int main()
     node->insertRec(34, 4, head);
     node->insertRec(34, 5, head);
     node->insertRec(45, 6, head);
+    node->insertRec(45, 7, head);
+    node->insertRec(45, 8, head);
 
     node->deleteDuplicates(head);
 
