@@ -91,7 +91,8 @@ int main()
     node->insertRec(23, 2, head);
     node->insertRec(34, 3, head);
     node->insertRec(34, 4, head);
-    node->insertRec(45, 5, head);
+    node->insertRec(34, 5, head);
+    node->insertRec(45, 6, head);
 
     node->deleteDuplicates(head);
 
