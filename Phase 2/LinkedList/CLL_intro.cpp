@@ -61,15 +61,33 @@ void insertHead(Node *&head, int value)
     node->next = head;
 }
 
-int main()
+void deleteNode(Node *&head, int position)
 {
 
-    // Node *node = new Node(5, NULL);
-    // Node *head = node;
-    // insertHead(head, 6);
-    // insertHead(head, 7);
-    // insertHead(head, 8);
-    // print(head);
+    if (head == NULL)
+    {
+        return;
+    }
+
+    if (head->next == head)
+    {
+        delete head;
+        return;
+    }
+
+    Node *temp = head;
+    int cnt = 1;
+    while (cnt < position - 1)
+    {
+        temp = temp->next;
+        cnt++;
+    }
+
+    temp->next = temp->next->next;
+}
+
+int main()
+{
 
     Node *head = NULL;
     insertHead(head, 5);
@@ -77,5 +95,6 @@ int main()
     insertHead(head, 7);
     insertHead(head, 8);
     insertHead(head, 9);
+    deleteNode(head, 3);
     print(head);
 }
