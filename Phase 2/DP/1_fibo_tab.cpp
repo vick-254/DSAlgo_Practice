@@ -3,6 +3,8 @@ using namespace std;
 
 int fib(int n)
 {
+    if (n <= 1)
+        return n;
     vector<int> dp(n + 1, -1);
 
     dp[0] = 0;
