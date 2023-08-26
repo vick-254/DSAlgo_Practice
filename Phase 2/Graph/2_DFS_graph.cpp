@@ -1,33 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// } Driver Code Ends
 class Solution
 {
-public:
-    // Function to return Breadth First Traversal of given graph.
-    vector<int> bfsOfGraph(int V, vector<int> adj[])
+private:
+    void dfs(int node, vector<int> adj[], vector<int> &vis, vector<int> &ls)
     {
-        queue<int> q;
-        q.push(0);
-        int vis[V] = {0};
-        vis[0] = 1;
-        vector<int> bfs;
-
-        while (!q.empty())
+        vis[node] = 1;
+        ls.push_back(node);
+        for (auto it : adj[node])
         {
-            int node = q.front();
-            q.pop();
-            bfs.push_back(node);
-            for (auto it : adj[node])
+            if (!vis[it])
             {
-                if (!vis[it])
-                {
-                    q.push(it);
-                    vis[it] = 1;
-                }
+                dfs(it, adj, vis, ls);
             }
         }
-        return bfs;
+    }
+
+public:
+    // Function to return a list containing the DFS traversal of the graph.
+    vector<int> dfsOfGraph(int V, vector<int> adj[])
+    {
+        vector<int> vis(V, 0);
+        vector<int> ls;
+        int start = 0;
+        dfs(start, adj, vis, ls);
+        return ls;
     }
 };
