@@ -6,25 +6,28 @@ using namespace std;
 class Solution
 {
 public:
-    // Function to return k largest elements from an array.
-    vector<int> kLargest(int arr[], int n, int k)
+    // Function to return the sorted array.
+    vector<int> nearlySorted(int arr[], int num, int K)
     {
-        priority_queue<int, vector<int>, greater<int>> q;
-        for (int i = 0; i < n; i++)
+        vector<int> ans;
+
+        priority_queue<int, vector<int>, greater<int>> pq;
+
+        for (int i = 0; i < num; i++)
         {
-            q.push(arr[i]);
-            if (q.size() > k)
+            pq.push(arr[i]);
+            if (pq.size() > K)
             {
-                q.pop();
+                ans.push_back(pq.top());
+                pq.pop();
             }
         }
-        vector<int> ans;
-        while (!q.empty())
+
+        while (!pq.empty())
         {
-            ans.push_back(q.top());
-            q.pop();
+            ans.push_back(pq.top());
+            pq.pop();
         }
-        reverse(ans.begin(), ans.end());
         return ans;
     }
 };
