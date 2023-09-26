@@ -20,6 +20,7 @@ public:
                     sum = sum - arr[i];
                     i++;
                 }
+                j++;
             }
             if (sum < k)
                 j++;
