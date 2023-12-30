@@ -26,6 +26,7 @@ public:
         vector<vector<int>> ans;
         vector<int> ds;
         int size = nums.size();
+        sort(nums.begin(), nums.end());
         solve(0, nums, ans, ds, size);
 
         return ans;
